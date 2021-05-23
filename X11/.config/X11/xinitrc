@@ -37,13 +37,12 @@ fi
 setxkbmap us -variant intl
 
 # Add to path things to use with WM
-export SUMO_HOME=/usr/bin/sumo
-export PATH=$PATH:$PYENV_ROOT/bin:$SUMO_HOME:/opt/dwmblocks
+export PATH=$PATH:$PYENV_ROOT/bin:$SUMO_FLOW
 
 if command -v pyenv 1>/dev/null 2>&1; then
-      eval "$(pyenv init -)"
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
 fi
-eval "$(pyenv virtualenv-init -)"
 
 # Nice looking bar
 # dwm-bar variables
