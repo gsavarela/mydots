@@ -58,6 +58,9 @@ dkms.conf
 # DWM executable
 **/dwm/dwm*
 
+# DWMBLOCKS executable
+**/dwmblocks/dwmblocks
+
 # Bash usage
 .bash_history
 .bash_logout
