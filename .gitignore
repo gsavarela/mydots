@@ -53,8 +53,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-*.o
 *.orig
+
+# DWM executable
+**/dwm/dwm*
 
 # Bash usage
 .bash_history
