@@ -6,11 +6,9 @@ output: dwmblocks.c blocks.def.h blocks.h
 blocks.h:
 	cp blocks.def.h $@
 
-
 clean:
-	rm -f *.o *.gch dwmblocks
+	rm -f *.o *.gch dwmblocks ../../dwmblocks/.local/bin/dwmblocks
 install: output
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
-	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
+	install -m 0755 dwmblocks ../../dwmblocks/.local/bin/dwmblocks
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
+	rm -f dwmblocks ../../dwmblocks/.local/bin/dwmblocks
