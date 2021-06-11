@@ -64,3 +64,6 @@ dkms.conf
 # Bash usage
 .bash_history
 .bash_logout
+
+# Neovim plugged 
+nvim/.local/share/nvim/site/autoload/plugged/
