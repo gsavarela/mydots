@@ -37,12 +37,12 @@ fi
 setxkbmap us -variant intl
 
 # Add to path things to use with WM
-export PATH=$PATH:$PYENV_ROOT/bin:$SUMO_FLOW
+#export PATH=$PATH:$PYENV_ROOT/bin:$SUMO_FLOW
 
-if command -v pyenv 1>/dev/null 2>&1; then
-	eval "$(pyenv init -)"
-	eval "$(pyenv virtualenv-init -)"
-fi
+# if command -v pyenv 1>/dev/null 2>&1; then
+# 	eval "$(pyenv init -)"
+# 	eval "$(pyenv virtualenv-init -)"
+# fi
 
 # Nice looking bar
 # dwm-bar variables
