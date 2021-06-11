@@ -5,6 +5,8 @@ include config.mk
 
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
+BASEDIR = $(shell dirname $(shell dirname $(CURDIR)))
+BINDIR = /dwm/.local/bin
 
 all: options dwm
 
@@ -13,6 +15,8 @@ options:
 	@echo "CFLAGS   = ${CFLAGS}"
 	@echo "LDFLAGS  = ${LDFLAGS}"
 	@echo "CC       = ${CC}"
+	@echo "BASEDIR  = ${BASEDIR}"
+	@echo "BINDIR   = ${BINDIR}"
 
 .c.o:
 	${CC} -c ${CFLAGS} $<
@@ -37,15 +41,20 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
-	mkdir -p ${DESTDIR}${PREFIX}/bin
-	cp -f dwm ${DESTDIR}${PREFIX}/bin
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
+	mkdir -p ${BASEDIR}${BINDIR}
+	cp -f dwm ${BASEDIR}${BINDIR}
+	chmod 755 ${BASEDIR}${BINDIR}/dwm
+	# mkdir -p ${DESTDIR}${PREFIX}/bin
+	# cp -f dwm ${DESTDIR}${PREFIX}/bin
+	# chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 uninstall:
-	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
+	# rm -f ${DESTDIR}${PREFIX}/bin/dwm\
+	# 	${DESTDIR}${MANPREFIX}/man1/dwm.1
+	rm -f ${BASEDIR}${BINDIR}/dwm\
 		${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 .PHONY: all options clean dist install uninstall
