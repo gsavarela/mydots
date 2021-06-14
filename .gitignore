@@ -1,3 +1,5 @@
+# Fuse NTFS
+**/.fuse_hidden*
 # Custom blocks file
 blocks.h
 
@@ -57,6 +59,8 @@ dkms.conf
 
 # DWM executable
 **/dwm/dwm*
+!**/dwm/dwm.1
+!**/dwm/dwm.o
 
 # DWMBLOCKS executable
 **/dwmblocks/dwmblocks
