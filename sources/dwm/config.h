@@ -107,8 +107,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     /* Extendend Padlock Functions */
-    { 0, XK_Print,                  spawn,          SHCMD("flameshot gui -p $XDG_DOWNLOAD_DIR") },
-    { ShiftMask, XK_Print,          spawn,          SHCMD("flameshot full -p $XDG_DOWNLOAD_DIR") },
+    { 0, XK_Print,                  spawn,          SHCMD("dwmscreenshotgui") },
+    { ShiftMask, XK_Print,          spawn,          SHCMD("dwmscreenshotfull") },
     { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5") },
     /* Special Keyboard Functions */
     { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5") },

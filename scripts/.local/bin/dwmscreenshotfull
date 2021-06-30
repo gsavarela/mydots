@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# dwmscreenshots full screen and saves on downloads.
+# requires
+# 1) Base XDG directories.
+# 2) Flameshot
+source $XDG_CONFIG_HOME/user-dirs.dirs
+flameshot full -p $XDG_DOWNLOAD_DIR
