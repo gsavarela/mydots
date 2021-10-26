@@ -1,10 +1,6 @@
 #
 # ~/.bash_profile
 #
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
 # XDG paths
 # Where user-specific configurations should be written (analogous /etc/)
 export XDG_CONFIG_HOME=$HOME/.config
@@ -15,6 +11,10 @@ export XDG_DATA_HOME=$HOME/.local/share
 # Where user-specific non-essential runtime files and other file objects
 # (such as sockets, named pipes, ...) should be stored
 export XDG_RUNTIME_DIR=$HOME/.local/proc
+
+export PYENV_ROOT="$XDG_DATA_HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # lf varibles
@@ -45,10 +45,9 @@ export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
 # Allows for separate config files for vim and neovim
 export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.vim" | so $MYVIMRC'
 export ILURL_HOME="$XDG_REPOSITORIES_DIR/ilu/ilurl"
-export SUMO_HOME="$XDG_REPOSITORIES_DIR/sumo"
-export SUMO_FLOW="$XDG_REPOSITORIES_DIR/sumo_v1_1_0/bin"
+export SUMO_HOME="$HOME/Repos/sumo"
 export BIN_HOME="$HOME/.local/bin"
-export PATH="$PATH:$SUMO_FLOW:$BIN_HOME"
+export PATH="$PATH:$BIN_HOME:$SUMO_HOME"
 
 
  
