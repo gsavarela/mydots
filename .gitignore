@@ -71,7 +71,12 @@ dkms.conf
 
 # Neovim plugged 
 nvim/.local/share/nvim/site/autoload/plugged/
+nvim/.local/share/nvim/.netrwhist
+nvim/.local/share/nvim/shada/main.shada
+nvim/.local/share/nvim/swap
 
 # Vim Vundle
 vim/.config/vim/bundle/*
 !vim/.config/vim/bundle/Vundle.vim
+
+
