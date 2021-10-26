@@ -1,5 +1,13 @@
 include "%L"
 
+<dead_acute> <A> : "Á"
+<dead_acute> <a> : "á"
 <dead_acute> <C> : "Ç"   Ccedilla # LATIN CAPITAL LETTER C WITH CEDILLA
 <dead_acute> <c> : "ç"   ccedilla # LATIN SMALL LETTER C WITH CEDILLA
+<dead_acute> <E> : "É"
+<dead_acute> <e> : "é"
+<dead_grave> <A> : "À"
+<dead_grave> <a> : "à"
+<dead_tilde> <A> : "Ã"
+<dead_tilde> <a> : "ã"
 
