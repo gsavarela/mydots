@@ -15,6 +15,7 @@ alias fcd='cd "$(find -type d,l | fzf)"'
 # Directory resolution
 alias C='cd $XDG_DOCUMENTS_DIR'
 alias D='cd $XDG_DOWNLOAD_DIR'
+alias G='echo $GITHUB_TOKEN | xclip -in | xclip -out'
 alias L='cd "$HOME/Library"'
 alias M='cd $XDG_MUSIC_DIR'
 alias P='cd $XDG_PICTURES_DIR'
@@ -27,3 +28,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
 fi
+
+# Fuzzy finds historical commands and stores on the clipboard
+fzh () {
+    history | fzf | awk '{$1=$1};1' | cut -d' ' -f2- | xclip -selection clipboard
+}
