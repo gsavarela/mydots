@@ -43,7 +43,7 @@ export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
 export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverrc
 
 # Allows for separate config files for vim and neovim
-export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.vim" | so $MYVIMRC'
+export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.lua" | so $MYVIMRC'
 export ILURL_HOME="$XDG_REPOSITORIES_DIR/ilu/ilurl"
 export SUMO_HOME="$HOME/Repos/sumo"
 export BIN_HOME="$HOME/.local/bin"
