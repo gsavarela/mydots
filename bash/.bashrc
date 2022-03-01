@@ -5,6 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# HISTORY SETTINGS
+# don't put duplicated lines, or lines starting
+# with space on history.
+HISTCONTROL=ignoreboth
+# historical commands from .bash_history
+HISTFILESIZE=5000
+# num of commands remembered from this bash session.
+HISTSIZE=2000
+
+
 source $XDG_CONFIG_HOME/user-dirs.dirs
 alias ls='ls --color=auto'
 # Forces XDG path
