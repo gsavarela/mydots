@@ -34,9 +34,13 @@ cd ../..
 Run stow to symlink everything or just select what you want
 
 ```
-stow $(ls -Isources -Ipathces )/ # Everything (the '/' ignores the README)
 
-stow dwm # Just my dwm config
+# Everything (-I flag to ignore source)
+
+stow -R $(ls -Isources -Ipatches -IREADME.md) -t ~
+
+# Just my dwm config
+stow dwm 
 
 ```
 

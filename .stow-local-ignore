@@ -3,7 +3,9 @@
 \.gitignore
 
 # Sources don't need to be stow-ed
-\src
+\sources
+\README.md
+\patches
 
 # Fuse ntfs
 \.fuse_hidden*
