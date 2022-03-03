@@ -71,8 +71,8 @@ dkms.conf
 
 # Neovim packer
 nvim/.local/share/nvim/*
-nvim/.config/nvim/plugin/packer_compiled.lua
-#
+nvim/.config/nvim/plugin/*
+
 # Vim Vundle
 vim/.config/vim/bundle/*
 !vim/.config/vim/bundle/Vundle.vim
