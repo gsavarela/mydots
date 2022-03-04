@@ -49,6 +49,16 @@ return packer.startup(function(use)
   use { "ellisonleao/gruvbox.nvim" }
   -- Code developer plugins
   -- use "tpope/fugitive"
+  -- Completion plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- Buffer completion
+  use "hrsh7th/cmp-path" -- Path completion
+  use "hrsh7th/cmp-cmdline" -- Cmdline completion
+  use "saadparwaiz1/cmp_luasnip" -- Snippet completion
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip" --snippet engine 
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use.
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
