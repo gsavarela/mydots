@@ -69,6 +69,7 @@ return packer.startup(function(use)
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
+  --
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -78,11 +79,17 @@ return packer.startup(function(use)
   -- use 'nvim-treesitter/playground'
 
   use 'windwp/nvim-autopairs'
+  --
    -- Comments
   use 'numToStr/Comment.nvim' -- Easily comment stuff
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  --
   -- Git
   use 'lewis6991/gitsigns.nvim'
+
+  -- Tree view
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
