@@ -69,3 +69,6 @@ keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvim-tree navigation
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- Null-ls: format
+keymap("n", "<leader>f", ":lua vim.lsp.buf.formatting_sync()<cr>", opts)
