@@ -10,6 +10,10 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Copy and Paste Ctrl+Shift+C and Ctrl+Shift+V
+keymap("", "<C-C>", "+y", opts)
+keymap("", "<C-V>", "+P", opts)
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -63,8 +67,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvim-tree navigation
