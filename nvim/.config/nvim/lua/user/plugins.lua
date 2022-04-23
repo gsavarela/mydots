@@ -47,6 +47,8 @@ return packer.startup(function(use)
 
   -- Colorschemes 
   use { 'ellisonleao/gruvbox.nvim' }
+  use {'luisiacc/gruvbox-baby'}
+
   -- Code developer plugins
   -- use 'tpope/fugitive'
   -- Completion plugins
