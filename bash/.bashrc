@@ -14,6 +14,9 @@ HISTFILESIZE=5000
 # num of commands remembered from this bash session.
 HISTSIZE=2000
 
+# Use Portuguese
+export LANG=en_US.UTF-8
+
 
 source $XDG_CONFIG_HOME/user-dirs.dirs
 alias ls='ls --color=auto'

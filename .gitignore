@@ -73,9 +73,9 @@ dkms.conf
 nvim/.local/share/nvim/*
 nvim/.config/nvim/plugin/*
 
-# Vim Vundle
-vim/.config/vim/bundle/*
-!vim/.config/vim/bundle/Vundle.vim
+# Vim 
+vim/.config/vim/*
+!vim/.config/vim/vimrc
 
 
 

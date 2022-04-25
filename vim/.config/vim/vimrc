@@ -1,95 +1,115 @@
+" Basic vimrc for notetaking.
+"
+" References: 
+" ----------
+" [1] https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/
+" [2] https://blog.joren.ga/vim-xdg
+"
+" BASIC CONFIG---------------------------------------------------
+" Disable compatibility with vi which can cause unexpected issues.
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set XDG paths
-" set runtimepath^=$XDG_CONFIG_HOME/vim
-" set runtimepath+=$XDG_DATA_HOME/vim
-" set runtimepath+=$XDG_CONFIG_HOME/vim/after
+" Enable plugins and load plugin for the detected file type.
+filetype plugin on
 
-" set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
-" set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
+" Load an indent file for the detected file type.
+filetype indent on
+
+" Turn syntax highlighting on.
+syntax on
+
+" Highlight cursor line underneath the cursor horizontally.
+set cursorline
+
+" Highlight cursor line underneath the cursor vertically.
+set cursorcolumn
+
+" Set shift width to 4 spaces.
+set shiftwidth=4
+
+" Set tab width to 4 columns.
+set tabstop=4
+
+" Use space characters instead of tabs.
+set expandtab
+
+" Do not save backup files.
+set nobackup
+
+" Do not let cursor scroll below or above N number of lines when scrolling.
+set scrolloff=10
+
+" Do not wrap lines. Allow long lines to extend as far as the line goes.
+set nowrap
+
+" While searching though a file incrementally highlight matching characters as you type.
+set incsearch
+
+" Ignore capital letters during search.
+set ignorecase
+
+" Override the ignorecase option if searching for capital letters.
+" This will allow you to search specifically for capital letters.
+set smartcase
+
+" Show partial command you type in the last line of the screen.
+set showcmd
+
+" Show the mode you are on the last line.
+set showmode
+
+" Show matching words during a search.
+set showmatch
+
+" Use highlighting when doing a search.
+set hlsearch
+
+" Set the commands to save in history default number is 20.
+set history=1000
+
+" Enter Portuguese accents
+set encoding=utf-8
+
+" XDG--------------------------------------------------------------------------------------------------- 
+
+if empty($MYVIMRC) | let $MYVIMRC = expand('<sfile>:p') | endif
+
+if empty($XDG_CACHE_HOME)  | let $XDG_CACHE_HOME  = $HOME."/.cache"       | endif
+if empty($XDG_CONFIG_HOME) | let $XDG_CONFIG_HOME = $HOME."/.config"      | endif
+if empty($XDG_DATA_HOME)   | let $XDG_DATA_HOME   = $HOME."/.local/share" | endif
+
+set runtimepath^=$XDG_CONFIG_HOME/vim
+set runtimepath+=$XDG_DATA_HOME/vim
+set runtimepath+=$XDG_CONFIG_HOME/vim/after
+
+set packpath^=$XDG_DATA_HOME/vim,$XDG_CONFIG_HOME/vim
+set packpath+=$XDG_CONFIG_HOME/vim/after,$XDG_DATA_HOME/vim/after
 
 let g:netrw_home = $XDG_DATA_HOME."/vim"
-" call mkdir($XDG_DATA_HOME."/vim/spell", 'p')
-" set viewdir=$XDG_DATA_HOME/vim/view | call mkdir(&viewdir, 'p')
+call mkdir($XDG_DATA_HOME."/vim/spell", 'p', 0700)
+set viewdir=$XDG_DATA_HOME/vim/view | call mkdir(&viewdir, 'p', 0700)
 
-" set backupdir=$XDG_CACHE_HOME/vim/backup | call mkdir(&backupdir, 'p')
-" set directory=$XDG_CACHE_HOME/vim/swap   | call mkdir(&directory, 'p')
-" set undodir=$XDG_CACHE_HOME/vim/undo     | call mkdir(&undodir,   'p')
+set backupdir=$XDG_CACHE_HOME/vim/backup | call mkdir(&backupdir, 'p', 0700)
+set directory=$XDG_CACHE_HOME/vim/swap   | call mkdir(&directory, 'p', 0700)
+set undodir=$XDG_CACHE_HOME/vim/undo     | call mkdir(&undodir,   'p', 0700)
 
-" if !has('nvim') | set viminfofile=$XDG_CACHE_HOME/vim/viminfo | endif
+" Plugins--------------------------------------------------------------------------------
+call plug#begin('~/.config/vim/plugged')
 
+    Plug 'morhetz/gruvbox'
+    Plug 'tpope/vim-fugitive'
+    Plug 'iamcco/markdown-preview.nvim'
+    Plug 'junegunn/fzf.vim'
 
-" set the runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-" set rtp+=$XDG_CONFIG_HOME/vim/bundle/Vundle.vim
+call plug#end()
+" Advanced Plugin
+" Config -------------------------------------------------------------------------------- 
 
-" Keep Plugin commands between vundle#begin/end.
-" call vundle#begin('~/.config/vim/bundle')
+set background=dark
+colo gruvbox
 
-" let Vundle manage Vundle, required
-" Plugin 'VundleVim/Vundle.vim'
-
-" Colorscheme
-" Plugin 'morhetz/gruvbox'
-
-"Derivative of powerline but lighter
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-
-" PYTHON plugins
-" jedi-vim provides code completion for vim
-" Plugin 'davidhalter/jedi-vim'
-
-" IDE for python
-" python-mode: https://github.com/python-mode/python-mode
-" Plugin 'python-mode/python-mode'
-
-" vim-poliglot: offers syntax highlighting 
-" Plugin 'sheerun/vim-polyglot'
-
-" Integrates Git commands with vim functionalities
-" Plugin 'tpope/vim-fugitive'
-
-
-" Allows markdown files preview
-" Plugin 'iamcco/markdown-preview.nvim'
-
-" All of your Plugins must be added before the following line
-" call vundle#end()            " required
-" Put your non-Plugin stuff after this line
-" Colorscheme
-" set background=dark
-" colo gruvbox
-" let g:airline_theme='gruvbox'
-
-set relativenumber
-set ruler
-syntax enable
-
-let g:python_highlight_all = 1
-" TODO: basic test settings
-" filetype plugin on
-
-"ctags path
-"set tags=./tags;
-
-"recursive path lookup
-set path+=**
-" set path+=$ILURL_HOME/..
-
-"show files and words during search
-set wildmenu
-set hls
-
-"load views
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-
-"default calcurse notes format 
-" autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
-
-"tabs behaviour
-set expandtab
-set tabstop=4
-set shiftwidth=4
+" Notes----------------------------------------------------------------------------------
+" This adds the `.md` suffix before searching a file with `gf`
+" Useful for searching zettel notes.
+autocmd BufRead,BufNewFile *.md set suffixesadd+=.md
