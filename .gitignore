@@ -76,6 +76,7 @@ nvim/.config/nvim/plugin/*
 # Vim 
 vim/.config/vim/*
 !vim/.config/vim/vimrc
+!vim/.config/vim/init
 
 
 
