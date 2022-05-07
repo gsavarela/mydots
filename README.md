@@ -91,6 +91,24 @@ Use the command `:NoteReferences` and select the link.
 
 See also his tutorials.
 
+### Vim for reference notes.
+
+One aspect of the Zettelkasten method is to make reference notes that outline the contents of an article. The vim-pandoc plugin provides for easy citation within a
+markdown file. Just drop the bib file containing the bibliography information and a reference markdown file containing the header: 
+```
+---
+title: Reading notes
+author: Author Name
+bibliography: /path/to/references.bib
+abstract: Reading notes with references
+---
+```
+
+Now by typing `[@` and typing `Ctrl+X+O` we can omini-complete our bibliography files. 
+<br />
+![citations](docs/vim/06_vim_for_citations.gif)
+<br />
+
 ### Vim as Mergetool.
 
 ## TODO <a name="TODO"></a> 

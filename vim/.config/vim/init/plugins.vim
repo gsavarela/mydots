@@ -8,5 +8,8 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'iamcco/markdown-preview.nvim'
     Plug 'junegunn/fzf.vim'
 
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
+
 call plug#end()
 
