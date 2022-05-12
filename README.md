@@ -3,7 +3,8 @@
 1. [Installation](#installation)
 2. [Neovim as IDE](#neovim_as_ide)
 3. [Vim for notetaking](#vim_for_notetaking)
-4. [TODO](#TODO)
+4. [Zsh](#zsh)
+5. [TODO](#TODO)
 
 ## Installation<a name="installation"></a> 
 
@@ -111,7 +112,17 @@ Now by typing `[@` and typing `Ctrl+X+O` we can omini-complete our bibliography 
 
 ### Vim as Mergetool.
 
-## TODO <a name="TODO"></a> 
 
+## Zsh<a name="zsh"></a> 
+
+The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
+
+- Muh plugin manager -- it's just a shell function.
+- Vim mode.
+- Synthax high-lighting.
+- Code completion.
+- Sane `zsh/` directory vs. monolithic `.bashrc`.
+
+## TODO <a name="TODO"></a> 
 - Add installer script
 - Add packages descriptions.
