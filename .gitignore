@@ -73,6 +73,8 @@ dkms.conf
 nvim/.local/share/nvim/*
 nvim/.config/nvim/plugin/*
 
+# St
+st/.local/bin/st
 # Vim 
 vim/.config/vim/*
 !vim/.config/vim/vimrc
