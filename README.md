@@ -1,6 +1,7 @@
 # Mydots
 
 1. [Installation](#installation)
+2. [Font](#font)
 2. [Neovim as IDE](#neovim_as_ide)
 3. [Vim for notetaking](#vim_for_notetaking)
 4. [Zsh](#zsh)
@@ -49,6 +50,19 @@ stow -R $(ls -Idocs -Isources -Ipatches -IREADME.md) -t ~
 stow dwm 
 
 ```
+## Installed fonts
+
+Two good sources: [Suckless Terminal and Fonts](https://github.com/LukeSmithxyz/voidrice/issues/284) and [MachOS](https://github.com/Mach-OS/Machfiles) 
+
+```
+    ttf-bitstream-vera 1.10-14
+    ttf-font-awesome 6.1.1-1
+    ttf-linux-libertine 5.3.0-8
+    ttf-nerd-fonts-symbols 2.1.0+36+gd0bf73a1-4
+    ttf-symbola 13.00-8
+```
+
+
 ## Neovim as IDE <a name="neovim_as_ide"></a> 
 
 
