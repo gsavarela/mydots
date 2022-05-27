@@ -76,6 +76,9 @@ nvim/.config/nvim/plugin/*
 # Dwm
 dwm/.local/bin/dwm
 
+# Dwmblocks
+dwmblocks/.local/bin/dwmblocks
+
 # St
 st/.local/bin/st
 
