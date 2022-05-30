@@ -40,6 +40,11 @@ if command -v pyenv 1>/dev/null 2>&1; then
 	eval "$(pyenv virtualenv-init -)"
 fi
 
+
+# Fonts
+xset +fp /home/gsavarela/.local/share/fonts
+xset fp rehash
+
 # Nice looking bar
 # dwm-bar variables
 export SEP1="["
