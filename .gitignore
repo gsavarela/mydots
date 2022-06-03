@@ -60,12 +60,7 @@ dkms.conf
 # DWM executable
 **/dwm/dwm*
 !**/dwm/dwm.1
-!**/dwm/dwm.o
 
-# DWMBLOCKS executable
-**/dwmblocks/dwmblocks
-
-# Bash usage
 .bash_history
 .bash_logout
 
@@ -75,6 +70,9 @@ nvim/.config/nvim/plugin/*
 
 # Dwm
 dwm/.local/bin/dwm
+
+# Dwmblocks
+dwmblocks/.local/bin/dwmblocks
 
 # St
 st/.local/bin/st

@@ -14,8 +14,8 @@ static const int showbar            = 1;     /* 0 means no bar */
 static const int topbar             = 1;     /* 0 means bottom bar */
 
 /* FONTS */
-static const char *fonts[]          = { "monospace:size=12" };
-static const char dmenufont[]       = "monospace:size=12";
+static const char *fonts[]          = { "monospace:size=13" };
+static const char dmenufont[]       = "monospace:size=13";
 
 /* COLORSCHEMES */
 static const char normbgcolor[]       = "#282828";
@@ -119,11 +119,11 @@ static Key keys[] = {
     /* Extendend Padlock Functions */
     { 0, XK_Print,                  spawn,          SHCMD("dwmscreenshotgui") },
     { ShiftMask, XK_Print,          spawn,          SHCMD("dwmscreenshotfull") },
-    { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5") },
+    { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
     /* Special Keyboard Functions */
-    { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5") },
-    { 0, XF86XK_AudioLowerVolume,   spawn,          SHCMD("pamixer -d 5") },
-    { 0, XF86XK_AudioMute,          spawn,          SHCMD("pamixer -t") },
+    { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
+    { 0, XF86XK_AudioLowerVolume,   spawn,          SHCMD("pamixer -d 5 && pkill -RTMIN+5 dwmblocks") },
+    { 0, XF86XK_AudioMute,          spawn,          SHCMD("pamixer -t && pkill -RTMIN+5 dwmblocks") },
 };
 
 /* button definitions */
