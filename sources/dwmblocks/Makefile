@@ -1,14 +1,21 @@
-PREFIX ?= /usr/local
-CC ?= cc
+.POSIX:
 
-output: dwmblocks.c blocks.def.h blocks.h
-	${CC} `pkg-config --cflags x11 --libs x11` dwmblocks.c -o dwmblocks
-blocks.h:
-	cp blocks.def.h $@
+CC = gcc
+BASEDIR = $(shell dirname $(shell dirname $(CURDIR)))
+BINDIR = /dwmblocks/.local/bin
 
+dwmblocks: main.o
+	$(CC) main.o -lX11 -Ofast -o dwmblocks
+main.o: main.c config.h
+	$(CC) -Ofast -c main.c
 clean:
-	rm -f *.o *.gch dwmblocks ../../dwmblocks/.local/bin/dwmblocks
-install: output
-	install -m 0755 dwmblocks ../../dwmblocks/.local/bin/dwmblocks
+	rm -f *.o *.gch dwmblocks ${BASEDIR}${BINDIR}/dwmblocks
+install: dwmblocks
+	mkdir -p ${BASEDIR}${BINDIR}
+	cp -f dwmblocks ${BASEDIR}${BINDIR}
+	chmod 755 ${BASEDIR}${BINDIR}/dwmblocks
+	rm -f dwmblocks
 uninstall:
-	rm -f dwmblocks ../../dwmblocks/.local/bin/dwmblocks
+	rm -f ${BASEDIR}${BINDIR}/dwmblocks
+
+.PHONY: clean install uninstall
