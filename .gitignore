@@ -76,6 +76,7 @@ dwmblocks/.local/bin/dwmblocks
 
 # St
 st/.local/bin/st
+sources/st/st
 
 # Vim 
 vim/.config/vim/*
