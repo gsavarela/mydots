@@ -1,24 +1,28 @@
 # Mydots
 
-1. [Installation](#installation)
-2. [Dwm](#dwm)
-3. [dwmblocks-async](#dwmblocks-async)
-4. [Font](#font)
-5. [Neovim as IDE](#neovim_as_ide)
-6. [Vim for notetaking](#vim_for_notetaking)
-7. [Zsh](#zsh)
-8. [TODO](#TODO)
+![mydots-screenshot](docs/img/mydots.png)
 
-## Installation<a name="installation"></a> 
+1. [Installation](#installation)
+2. Window Manager: [Dwm](#dwm)
+    - Terminal: [suckless terminal](https://st.suckless.org/)
+    - Status Bar: [dwmblocks-async](#dwmblocks-async)
+    - Fonts: [Font](#font)
+3. Editors:
+    - [Neovim as IDE](#neovim_as_ide)
+    - [Vim for notetaking](#vim_for_notetaking)
+4. Shell: [Zsh](#zsh)
+5. [TODO](#TODO)
+---
+# 1. Installation<a name="installation"></a> 
 
 Those are my dot files so far.. this is a work in progress hence it may break.
 
-### Requirements
+## Requirements
 
 You will need `git`, GNU `stow` and [XDG Base Directory](https://wiki.archlinux.org/title/XDG_Base_Directory)
 
 
-### Download
+## Download
 
 `cd` into a directory of your choice
 
@@ -28,7 +32,7 @@ git clone https://github.com/gsavarela/mydots.git && cd mydots
 
 ```
 
-### Compile Suckless Tools
+## Compile Suckless Tools
 
 ```
 cd sources && cd dwm && sudo make clean install
@@ -38,32 +42,22 @@ cd ../..
 
 ```
 
-### Stow 
+## Stow 
 
 Run stow to symlink everything or just select what you want
 
 ```
 
-# Everything (-I flag to ignore source)
+### Everything (-I flag to ignore source)
 
 stow -R $(ls -Idocs -Isources -Ipatches -IREADME.md) -t ~
 
-# Just my dwm config
+### Just my dwm config
 stow dwm 
 
 ```
-## Installed fonts
-
-Two good sources: [Suckless Terminal and Fonts](https://github.com/LukeSmithxyz/voidrice/issues/284) and [MachOS](https://github.com/Mach-OS/Machfiles) 
-
-```
-    ttf-bitstream-vera 1.10-14
-    ttf-font-awesome 6.1.1-1
-    ttf-linux-libertine 5.3.0-8
-    ttf-nerd-fonts-symbols 2.1.0+36+gd0bf73a1-4
-    ttf-symbola 13.00-8
-```
-## Dwm
+---
+# 2. Dwm
 
 ## Dwmblocks-async<a name="dwmblocks-async"></a> 
 
@@ -112,6 +106,7 @@ What's even better is that you can externally trigger updation of any specific b
 
 
 ### Why `dwmblocks-async`?
+
 Everything I have mentioned till now is offered by the vanilla `dwmblocks`, which is fine for most users. What sets `dwmblocks-async` apart from vanilla `dwmblocks` is the 'async' part. `dwmblocks` executes the commands of each blocks sequentially which means that the mail and date blocks, from above example, would be executed one after the other. This means that the date block won't update unless the mail block is done executing, or vice versa. This is bad for scenarios where one of the blocks takes seconds to execute, and is clearly visible when you first start `dwmblocks`.
 
 This is where the async nature of `dwmblocks-async` steps in tells the computer to execute each block asynchronously or simultaneously.
@@ -173,7 +168,18 @@ To use this feature, define the `CLICKABLE_BLOCKS` feature macro in your `config
 ```
 
 Apart from that, you need `dwm` to be patched with [statuscmd](https://dwm.suckless.org/patches/statuscmd/).
+---
+# Installed fonts<a name="fonts"></a> 
+Two good sources: [Suckless Terminal and Fonts](https://github.com/LukeSmithxyz/voidrice/issues/284) and [MachOS](https://github.com/Mach-OS/Machfiles) 
 
+```
+    ttf-bitstream-vera 1.10-14
+    ttf-font-awesome 6.1.1-1
+    ttf-linux-libertine 5.3.0-8
+    ttf-nerd-fonts-symbols 2.1.0+36+gd0bf73a1-4
+    ttf-symbola 13.00-8
+```
+---
 ## Neovim as IDE <a name="neovim_as_ide"></a> 
 
 
@@ -247,3 +253,13 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 - Synthax high-lighting.
 - Code completion.
 - Sane `zsh/` directory vs. monolithic `.bashrc`.
+
+# TODO
+- [] Switch to [xrdb patch](https://dwm.suckless.org/patches/xrdb/) for theme switching
+- [] Fix the issue with hardcoded path
+- [] Create a list of keybindings
+- [ ] Explain installation procedure and how everything works
+	- [] Mention the mandatory and optional dependencies
+	- [ ] Make a basic guide
+	- [ ] Make a detailed guide
+	- [ ] Make guides for fedora and debian
