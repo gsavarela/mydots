@@ -117,8 +117,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     /* Extendend Padlock Functions */
-    { 0, XK_Print,                  spawn,          SHCMD("dwmscreenshotgui") },
-    { ShiftMask, XK_Print,          spawn,          SHCMD("dwmscreenshotfull") },
+    { 0, XK_Print,                  spawn,          SHCMD("wm-screenshotgui") },
+    { ShiftMask, XK_Print,          spawn,          SHCMD("wm-screenshotfull") },
     { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
     /* Special Keyboard Functions */
     { 0, XF86XK_AudioRaiseVolume,   spawn,          SHCMD("pamixer -i 5 && pkill -RTMIN+5 dwmblocks") },
