@@ -12,9 +12,8 @@ clean:
 	rm -f *.o *.gch dwmblocks ${BASEDIR}${BINDIR}/dwmblocks
 install: dwmblocks
 	mkdir -p ${BASEDIR}${BINDIR}
-	cp -f dwmblocks ${BASEDIR}${BINDIR}
+	mv -f dwmblocks ${BASEDIR}${BINDIR}
 	chmod 755 ${BASEDIR}${BINDIR}/dwmblocks
-	rm -f dwmblocks
 uninstall:
 	rm -f ${BASEDIR}${BINDIR}/dwmblocks
 
