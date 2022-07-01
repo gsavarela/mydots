@@ -1,0 +1,38 @@
+1590+257
+1590+257+10
+exit
+exit()
+import maplotlib.pyplot as plt 
+import matplotlib.pyplot as plt 
+import numpy as np
+X = np.linspace(1, 500, 100)
+Y = 1 - np.log10((X + 1) / 25)
+Y[-1]
+plt.plot(X, Y)
+plt.show()
+X = np.linspace(0, 499, 100)
+Y = 1 - np.log10((X + 1) / 25)
+plt.plot(X, Y)
+plt.show()
+Y[-1]
+7 * 7
+15 * 15
+(7 * 7) / (15 * 15)
+exit
+exit()
+import torch
+exit
+rxit()
+exit()
+import maagent
+import magent
+exit
+exit()
+from pettinzoo import magent
+from pettingzoo import magent
+maagent
+exit
+exit()
+from pettingzoo.magent import BaseModel
+exit
+exit()

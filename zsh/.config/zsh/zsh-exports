@@ -19,6 +19,8 @@ export XDG_DATA_HOME=$HOME/.local/share
 # (such as sockets, named pipes, ...) should be stored
 export XDG_RUNTIME_DIR=$HOME/.local/proc
 
+export XDG_STATE_HOME=$HOME/.local/state
+
 export EDITOR='vim'
 export READER='zathura'
 export TERMINAL='st'
@@ -34,8 +36,11 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 # export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export KERAS_HOME="${XDG_STATE_HOME}/keras"
+
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
 export X11_CONFIG_HOME="$XDG_CONFIG_HOME"/X11
 export XCOMPOSEFILE="$X11_CONFIG_HOME"/xcompose
 export XCOMPOSECACHE="$XDG_CACHE_HOME"/X11/xcompose
