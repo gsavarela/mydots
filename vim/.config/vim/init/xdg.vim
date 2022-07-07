@@ -5,6 +5,7 @@
 " References: 
 " ----------
 " [1] https://blog.joren.ga/vim-xdg
+" [2] https://wiki.archlinux.org/title/XDG_Base_Directory
 
 if empty($MYVIMRC) | let $MYVIMRC = expand('<sfile>:p') | endif
 
@@ -23,6 +24,10 @@ let g:netrw_home = $XDG_DATA_HOME."/vim"
 call mkdir($XDG_DATA_HOME."/vim/spell", 'p', 0700)
 set viewdir=$XDG_DATA_HOME/vim/view | call mkdir(&viewdir, 'p', 0700)
 
-set backupdir=$XDG_CACHE_HOME/vim/backup | call mkdir(&backupdir, 'p', 0700)
-set directory=$XDG_CACHE_HOME/vim/swap   | call mkdir(&directory, 'p', 0700)
-set undodir=$XDG_CACHE_HOME/vim/undo     | call mkdir(&undodir,   'p', 0700)
+set backupdir=$XDG_STATE_HOME/vim/backup | call mkdir(&backupdir, 'p', 0700)
+set directory=$XDG_STATE_HOME/vim/swap   | call mkdir(&directory, 'p', 0700)
+set undodir=$XDG_STATE_HOME/vim/undo     | call mkdir(&undodir,   'p', 0700)
+set viewdir=$XDG_STATE_HOME/vim/view     | call mkdir(&viewdir,   'p', 0700)
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
+
+" if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
