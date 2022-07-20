@@ -11,7 +11,8 @@
     - [Neovim as IDE](#neovim_as_ide)
     - [Vim for notetaking](#vim_for_notetaking)
 4. Shell: [Zsh](#zsh)
-5. [TODO](#TODO)
+5. Notifications: [Dunst](https://dunst-project.org/) 
+6. [TODO](#TODO)
 ---
 # 1. Installation<a name="installation"></a> 
 
@@ -255,6 +256,7 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 - Sane `zsh/` directory vs. monolithic `.bashrc`.
 
 # TODO
+
 - [] Switch to [xrdb patch](https://dwm.suckless.org/patches/xrdb/) for theme switching
 - [] Fix the issue with hardcoded path
 - [] Create a list of keybindings
@@ -263,3 +265,4 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 	- [ ] Make a basic guide
 	- [ ] Make a detailed guide
 	- [ ] Make guides for fedora and debian
+- [] Scripts for detecting mountable and unmountable paths
