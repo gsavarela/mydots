@@ -56,5 +56,10 @@ nitrogen --restore &
 # Compositor
 picom --config .config/picom/picom.conf  &
 
+# Requires nmcli and GTK complient with tray 
+# Controls wifi connections
+# https://man.archlinux.org/man/nm-applet.1.en
+nm-applet &
+
 # Execute DWM
 exec dwm
