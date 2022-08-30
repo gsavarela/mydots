@@ -1,12 +1,38 @@
-local configs = require("nvim-treesitter.configs")
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+  return
+end
+
+-- local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+-- ft_to_parser.motoko = "typescript"
+
 configs.setup {
-  ensure_installed = {"bash", "c", "javascript", "json", "markdown", "python", "vim"},
-  sync_install = false,
+  -- ensure_installed = "all", -- one of "all" or a list of languages
+  ensure_installed = {"bash", "c", "css", "go", "html","markdown", "python", "lua"}, -- one of "all" or a list of languages
+  sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
-    additional_vim_regex_highlighting = true,
+  matchup = {
+    enable = true, -- mandatory, false will disable the whole extension
+    disable_virtual_text = true,
+    disable = { "html" }, -- optional, list of language that will be disabled
+    -- include_match_words = false
   },
-  indent = { enable = true, disable = { "yaml" } },
+  highlight = {
+    -- use_languagetree = true,
+    enable = true, -- false will disable the whole extension
+    disable = { "markdown" }, -- list of language that will be disabled
+  },
+  autopairs = {
+    enable = true,
+  },
+  indent = { enable = true, disable = { "python", "css", "rust" } },
+  rainbow = {
+    enable = true,
+    colors = {
+      "Gold",
+      "Orchid",
+      "DodgerBlue",
+    },
+    disable = { "html" },
+  },
 }
