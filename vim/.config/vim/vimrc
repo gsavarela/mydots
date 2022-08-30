@@ -7,6 +7,9 @@
 "
 source $HOME/.config/vim/init/xdg.vim 	    " XDG 
 source $HOME/.config/vim/init/options.vim 	" Options
+source $HOME/.config/vim/init/keymaps.vim 	" Default keymaps
 source $HOME/.config/vim/init/plugins.vim 	" Plugins
+source $HOME/.config/vim/init/vimwiki.vim 	" Vimwiki config
+" source $HOME/.config/vim/init/vimzettel.vim 	" Vim-zettel config
 source $HOME/.config/vim/init/notes.vim 	" Custom functions for note-taking.
 source $HOME/.config/vim/init/custom.vim 	" Plugins options and commands

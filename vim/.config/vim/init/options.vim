@@ -13,14 +13,16 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " Enable plugins and load plugin for the detected file type.
-filetype plugin on
+filetype plugin on  " Required by vimwiki
+
 
 " Load an indent file for the detected file type.
-filetype indent on
+filetype indent on 
 
 " Turn syntax highlighting on.
-syntax on
+syntax on " Required by vimwiki
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
