@@ -12,8 +12,8 @@ call plug#begin('~/.config/vim/plugged')
     " Fuzzy find for vim
     Plug 'junegunn/fzf.vim', {'commit': 'c491d702b76c6b4918abb80be3cfb57d1b618ffa'} 
 
-    Plug 'vimwiki/vimwiki', {'commit': '63af6e72dd3fa840bffb3ebcb8c96970c02e0913'}  " Creation of a hyperlinks on markdown files
-    Plug 'michal-h21/vim-zettel', {'commit': 'a1b1cbf49b2d1a183fa0e5ec46422865ec00c611'}
+    " Plug 'vimwiki/vimwiki', {'commit': '63af6e72dd3fa840bffb3ebcb8c96970c02e0913'}  " Creation of a hyperlinks on markdown files
+    " Plug 'michal-h21/vim-zettel', {'commit': 'a1b1cbf49b2d1a183fa0e5ec46422865ec00c611'}
 
     Plug 'vim-pandoc/vim-pandoc', {'commit': '7dbda1c885c4c5dd3f865aa29e1b82167663aeec'}    " Make citations
     Plug 'vim-pandoc/vim-pandoc-syntax', {'commit': '2baeabb9584bb948618806f22bc4cef5685535fc'}
