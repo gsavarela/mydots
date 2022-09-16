@@ -8,6 +8,7 @@ let g:vimwiki_list = [
 let g:vimwiki_use_mouse = 1
 let g:vimwiki_folding = 'expr'
 let g:vimwiki_auto_chdir = 1
+"
 " https://github.com/vimwiki/vimwiki/issues/461
 " au FileType vimwiki set syntax=markdown.pandoc
 " let g:vimwiki_global_ext= 0
