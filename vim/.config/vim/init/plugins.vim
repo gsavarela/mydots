@@ -17,6 +17,9 @@ call plug#begin('~/.config/vim/plugged')
 
     " Plug 'vim-pandoc/vim-pandoc', {'commit': '7dbda1c885c4c5dd3f865aa29e1b82167663aeec'}    " Make citations
     " Plug 'vim-pandoc/vim-pandoc-syntax', {'commit': '2baeabb9584bb948618806f22bc4cef5685535fc'}
+    " Use citation.vim for handling citations.
+    Plug 'Shougo/unite.vim' , {'commit': 'b08814362624ded3b462addba4711647879ca308'}
+    Plug 'rafaqz/citation.vim', {'commit': '51ded63532956403c32dce8e854baf36ea907254'}
 
 call plug#end()
 
