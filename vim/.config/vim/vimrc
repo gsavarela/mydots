@@ -11,4 +11,4 @@ source $HOME/.config/vim/init/keymaps.vim 	" Default keymaps
 source $HOME/.config/vim/init/plugins.vim 	" Plugins
 source $HOME/.config/vim/init/vimwiki.vim 	" Vimwiki config
 source $HOME/.config/vim/init/vimzettel.vim 	" Vim-zettel config
-source $HOME/.config/vim/init/custom.vim 	" Plugins options and commands
+source $HOME/.config/vim/init/citation.vim 	" Vim citgation plugin

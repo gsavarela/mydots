@@ -23,3 +23,6 @@ call plug#begin('~/.config/vim/plugged')
 
 call plug#end()
 
+" Very minimal plugin-based configurations
+set background=dark
+colo gruvbox

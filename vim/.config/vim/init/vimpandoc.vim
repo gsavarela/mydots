@@ -1,23 +1,5 @@
 "
-" ~/.config/vim/init/custom.vim
-"
-set background=dark
-colo gruvbox
-
-" Citation----------------------------------------------------------------------------------
-
-let g:citation_vim_bibtex_file='~/Library/notas/informatics/info.bib'
-let g:citation_vim_mode='bibtex' 
-let g:citation_vim_cache_path='~/.cache/vim/bibtex'
-let g:citation_vim_outer_prefix='['
-let g:citation_vim_inner_prefix='@'
-let g:citation_vim_suffix=']'
-
-" Unite leader
-nmap <leader>u [unite]
-nnoremap [unite] <nop>
-" Insert citation
-nnoremap <silent>[unite]c       :<C-u>Unite -buffer-name=citation-start-insert -default-action=append      citation/key<cr>
+" ~/.config/vim/init/vimpandoc.vim
 "
 "Notes----------------------------------------------------------------------------------
 " This adds the `.md` suffix before searching a file with `gf`
