@@ -14,6 +14,8 @@
 5. Notifications: [Dunst](https://dunst-project.org/) 
 6. [TODO](#TODO)
 ---
+
+
 # 1. Installation<a name="installation"></a> 
 
 Those are my dot files so far.. this is a work in progress hence it may break.
@@ -58,6 +60,7 @@ stow dwm
 
 ```
 ---
+
 # 2. Dwm
 
 ## Dwmblocks-async<a name="dwmblocks-async"></a> 
@@ -191,58 +194,35 @@ Vim also serves as the utility for as mergetool, just can't live without fugitiv
 
 ### Vim as Zettelkasten.
 
-The current setup mostly uses the excelent scripts by [joakin/vim](https://github.com/joakin/.vim) and his [tutorial](https://www.youtube.com/watch?v=u8jvUaqadsg).
+Uses [vim-zettel](https://github.com/michal-h21/vim-zettel) built on top of the
+well known [vimwiki](https://github.com/vimwiki/vimwiki) plugin.
 
-#### 1. NewNote
-Start writing using the command `:NewNote` and passing a header:
-<br />
-![new_note](docs/vim/01_vim_for_notetaking-new_note.gif)
-<br />
-#### 2. The next (related) note.
-From within the note it's often convinent to add a new note:
-<br />
-![related_note](docs/vim/02_vim_for_notetaking-new_note-related.gif)
-<br />
+#### 1. Create new note.
 
-#### 3. Linking both notes.
-We can now link both notes using `:NoteLink`
-<br />
-![note_linking](docs/vim/03_vim_for_notetaking-linking.gif)
-<br />
+You can create a new note with the selected text as the note title by typing
+`z` 
 
-#### 4. Note Navigation
-Use the `go to file` shortcut `gf` and `Ctrl+o` to go back.
-<br />
-![navigation](docs/vim/04_vim_for_notetaking-navigation.gif)
-<br />
+#### 2. Linking an existent note
 
-#### 5. Searching for backlinks.
-Use the command `:NoteReferences` and select the link.
-<br />
-![backlinks](docs/vim/05_vim_for_notetaking-backlinks.gif)
-<br />
+Type `[[` for linking to an existent note.  This runs the silver searcher in a
+new window split and dynamically shows search results as you type. Hitting
+enter on one of its search result lines inserts a link to that file in your
+note.
 
-See also his tutorials.
 
-### Vim for reference notes.
+#### 3. Backlinking
 
-One aspect of the Zettelkasten method is to make reference notes that outline the contents of an article. The vim-pandoc plugin provides for easy citation within a
-markdown file. Just drop the bib file containing the bibliography information and a reference markdown file containing the header: 
-```
----
-title: Reading notes
-author: Author Name
-bibliography: /path/to/references.bib
-abstract: Reading notes with references
----
-```
+Type `T` (in normal mode) to create backlinks.  Copy note title and place it on
+the buffer for backlinking. If you want to insert a link to the current note in
+another note you can type `T` in normal mode to copy a formatted wiki link with
+the current note title as the link text that you can paste in other notes.
 
-Now by typing `[@` and typing `Ctrl+X+O` we can omini-complete our bibliography files. 
-<br />
-![citations](docs/vim/06_vim_for_citations.gif)
-<br />
+#### More...
+
+Type `:Zettel` and press tab for command completion.
 
 ### Vim as Mergetool.
+
 
 
 ## Zsh<a name="zsh"></a> 
@@ -255,6 +235,7 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 - Code completion.
 - Sane `zsh/` directory vs. monolithic `.bashrc`.
 
+
 # TODO
 
 - [] Switch to [xrdb patch](https://dwm.suckless.org/patches/xrdb/) for theme switching
@@ -266,3 +247,5 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 	- [ ] Make a detailed guide
 	- [ ] Make guides for fedora and debian
 - [] Scripts for detecting mountable and unmountable paths
+- [] Create a backup routine.
+- 
