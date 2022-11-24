@@ -15,12 +15,20 @@
       recursive: true
     ~/.config/python:
       recursive: true
+    ~/.config/vim:
+      recursive: true
+    ~/.config/X11:
+      recursive: true
+    ~/.config/zsh:
+      recursive: true
     # ~/.local/:
     #   recursive: true
 
 - link:
     ~/.config/dunst: dunst
-    # ~/.config/bash: bash
+    # ~/.config/bash:
+    #   path: bash/*
+    #   glob: true
     ~/.config/fontconfig/font.conf: fonts.conf 
     ~/.config/git: git
     ~/.config/lf: lf
