@@ -1,0 +1,72 @@
+# dotbot
+# https://github.com/anishathalye/dotbot
+- defaults:
+    link:
+      relink: true
+
+- clean:
+    ~/.config/git:
+      recursive: true
+    ~/.config/lf:
+      recursive: true
+    ~/.config/neofetch:
+      recursive: true
+    ~/.config/picom:
+      recursive: true
+    ~/.config/python:
+      recursive: true
+    # ~/.local/:
+    #   recursive: true
+
+- link:
+    ~/.config/dunst: dunst
+    # ~/.config/bash: bash
+    ~/.config/fontconfig/font.conf: fonts.conf 
+    ~/.config/git: git
+    ~/.config/lf: lf
+    ~/.config/neofetch: 
+      path: neofetch
+      relink: true
+    ~/.config/npm: npm 
+    ~/.config/nvim: nvim 
+    ~/.config/locale.conf: locale.conf
+    ~/.config/picom: picom
+    ~/.config/python: python
+    ~/.config/wget-hsts: wget-hsts
+    ~/.config/vim: vim
+    ~/.config/X11: X11
+    ~/.config/zsh: zsh
+    # ~/.local/bin: 
+    #   path: bin/*
+    #   glob: true
+    ~/.local/bin/dwm: dwm/dwm
+    ~/.local/bin/dwmblocks: dwmblocks/dwmblocks
+    ~/.local/bin/st: st/st
+    ~/.local/share/fonts: fonts
+    ~/.local/share/themes: themes
+    ~/.local/state/keras: keras
+    
+
+- create:
+    - ~/.config/dunst
+    # - ~/.config/bash
+    - ~/.config/fontconfig
+    - ~/.config/git
+    - ~/.config/lf
+    - ~/.config/neofetch
+    - ~/.config/npm
+    - ~/.config/nvim
+    - ~/.config/picom
+    - ~/.config/python
+    - ~/.config/vim
+    - ~/.config/X11
+    - ~/.config/zsh
+    - ~/.local/bin
+    - ~/.local/share/fonts
+    - ~/.local/share/themes
+    - ~/.local/state/keras
+
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [sudo stow -R etc/ -t /etc/ , Installing zshenv]

@@ -61,29 +61,26 @@ dkms.conf
 **/dwm/dwm*
 !**/dwm/dwm.1
 
-.bash_history
-.bash_logout
+bash/.bash_history
+bash/.bash_logout
 
 # Neovim packer
 nvim/.local/share/nvim/*
 nvim/.config/nvim/plugin/*
 
 # Dwm
-dwm/.local/bin/dwm
+dwm/dwm
 
 # Dwmblocks
-dwmblocks/.local/bin/dwmblocks
+dwmblocks/dwmblocks
 
 # St
-st/.local/bin/st
-sources/st/st
+st/st
 
 # Vim 
-vim/.config/vim/*
-!vim/.config/vim/vimrc
-!vim/.config/vim/init
+vim/plugged
 
 # Zsh
-zsh/.config/zsh/plugins/*
-zsh/.config/zsh/.zcompdump
-zsh/.config/zsh/.zsh_history
+zsh/plugins/*
+zsh/.zcompdump
+zsh/.zsh_history
