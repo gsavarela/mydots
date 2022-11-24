@@ -7,7 +7,7 @@ include config.mk
 SRC = st.c x.c
 OBJ = $(SRC:.c=.o)
 BASEDIR = $(shell dirname $(shell dirname $(CURDIR)))
-BINDIR = /st/.local/bin
+BINDIR = /st
 
 all: options st
 
@@ -48,9 +48,6 @@ install: st
 	mkdir -p $(BASEDIR)$(BINDIR)
 	cp -f st $(BASEDIR)$(BINDIR)
 	chmod 755 $(BASEDIR)$(BINDIR)/st
-	# mkdir -p $(DESTDIR)$(PREFIX)/bin
-	# cp -f st $(DESTDIR)$(PREFIX)/bin
-	# chmod 755 $(DESTDIR)$(PREFIX)/bin/st
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < st.1 > $(DESTDIR)$(MANPREFIX)/man1/st.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/st.1
@@ -58,7 +55,6 @@ install: st
 	@echo Please see the README file regarding the terminfo entry of st.
 
 uninstall:
-	# rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(BASEDIR)$(BINDIR)/st
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
 

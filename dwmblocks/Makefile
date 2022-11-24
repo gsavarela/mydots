@@ -1,8 +1,8 @@
 .POSIX:
 
 CC = gcc
-BASEDIR = $(shell dirname $(shell dirname $(CURDIR)))
-BINDIR = /dwmblocks/.local/bin
+BASEDIR = $(shell dirname $(CURDIR))
+BINDIR = /dwmblocks
 
 dwmblocks: main.o
 	$(CC) main.o -lX11 -Ofast -o dwmblocks
@@ -12,7 +12,6 @@ clean:
 	rm -f *.o *.gch dwmblocks ${BASEDIR}${BINDIR}/dwmblocks
 install: dwmblocks
 	mkdir -p ${BASEDIR}${BINDIR}
-	mv -f dwmblocks ${BASEDIR}${BINDIR}
 	chmod 755 ${BASEDIR}${BINDIR}/dwmblocks
 uninstall:
 	rm -f ${BASEDIR}${BINDIR}/dwmblocks

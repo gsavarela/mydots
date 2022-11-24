@@ -5,8 +5,8 @@ include config.mk
 
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
-BASEDIR = $(shell dirname $(shell dirname $(CURDIR)))
-BINDIR = /dwm/.local/bin
+BASEDIR = $(shell dirname $(CURDIR))
+BINDIR = /dwm/
 
 all: options dwm
 
@@ -42,8 +42,7 @@ dist: clean
 
 install: all
 	mkdir -p ${BASEDIR}${BINDIR}
-	mv -f dwm ${BASEDIR}${BINDIR}
-	chmod 755 ${BASEDIR}${BINDIR}/dwm
+	chmod 755 ${BASEDIR}${BINDIR}dwm
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
