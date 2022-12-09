@@ -32,7 +32,7 @@ source "$XDG_CONFIG_HOME/profile"
 export LESSHISTFILE=-
 
 # Hardcoded paths
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export CARGO_HOME="$XDG_DATA_HOME"/cargo/bin
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 # export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
@@ -52,4 +52,4 @@ export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$X
 export ILURL_HOME="$XDG_REPOSITORIES_DIR/ilu/ilurl"
 export SUMO_HOME="$HOME/Repos/sumo"
 export BIN_HOME="$HOME/.local/bin"
-export PATH="$PATH:$BIN_HOME:$SUMO_HOME"
+export PATH="$PATH:$BIN_HOME:$SUMO_HOME:$CARGO_HOME"
