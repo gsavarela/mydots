@@ -26,9 +26,9 @@
 
 - link:
     ~/.config/dunst: dunst
-    # ~/.config/bash:
-    #   path: bash/*
-    #   glob: true
+      #  ~/.config/bash:
+      #  path: bash/*
+      #  glob: true
     ~/.config/fontconfig/font.conf: fonts.conf 
     ~/.config/git: git
     ~/.config/lf: lf
@@ -44,9 +44,9 @@
     ~/.config/vim: vim
     ~/.config/X11: X11
     ~/.config/zsh: zsh
-    # ~/.local/bin: 
-    #   path: bin/*
-    #   glob: true
+    ~/.local/bin: 
+      path: bin/*
+      glob: true
     ~/.local/bin/dwm: dwm/dwm
     ~/.local/bin/dwmblocks: dwmblocks/dwmblocks
     ~/.local/bin/st: st/st
@@ -78,3 +78,5 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [sudo stow -R etc/ -t /etc/ , Installing zshenv]
+  - [sudo chsh -s /etc/zsh, Changing default shell to zsh]
+
