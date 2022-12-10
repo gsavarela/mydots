@@ -77,6 +77,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [sudo stow -R etc/ -t /etc/ , Installing zshenv]
+  - [sudo stow -R etc/ -t /etc/ , Installing zshenv and pacman.conf]
   - [sudo chsh -s /etc/zsh, Changing default shell to zsh]
 
