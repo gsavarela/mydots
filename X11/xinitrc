@@ -50,6 +50,11 @@ dwmblocks &
 # pulseaudio
 pulseaudio --start
 
+# Home dual monitor setup
+if [ -n $(xrandr --listmonitors | grep +DP1 | cut -d' ' -f3) ]; then 
+  xrandr --output eDP1 --primary --mode 1920x1080 --output DP1 --mode 1920x1080 --left-of eDP1
+fi
+
 # Wallpaper
 nitrogen --restore &
 
