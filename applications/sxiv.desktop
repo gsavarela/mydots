@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name[en_US]=sxiv                                # name of an app.
+GenericName=Simple X Image Viewer               # longer name of an app.
+Exec=/usr/bin/sxiv                              # command used to launch an app.
+Terminal=true                                   # whether an app requires to be run in a terminal.
+Icon[en_US]=~/.local/share/applications/sxiv-icon.png         # location of icon file.
+Type=Application                                # type.
+Categories=Application;ImageViewer;Image;       # categories in which this app should be listed.
+Comment[en_US]=Minimal Image Viewer             # comment which appears as a tooltip.

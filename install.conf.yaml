@@ -21,10 +21,13 @@
       recursive: true
     ~/.config/zsh:
       recursive: true
-    # ~/.local/:
-    #   recursive: true
+    ~/.config/applications:
+      recursive: true
 
 - link:
+    ~/.config/applications: 
+      path: applications/*
+      glob: True
     ~/.config/dunst: dunst
       #  ~/.config/bash:
       #  path: bash/*
