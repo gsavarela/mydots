@@ -3,8 +3,13 @@
 " Plugins--------------------------------------------------------------------------------
 call plug#begin('~/.config/vim/plugged')
     " Style
+    " Color schemes
     Plug 'morhetz/gruvbox', {'commit': 'bf2885a95efdad7bd5e4794dd0213917770d79b7'}
-    " Git integration
+    Plug 'vihu/melange', {'commit': 'c0b83c136246ab56b24414f8ee8a6e633c8b9a92'} "Warm colors brown theme.
+    "Status bar
+    Plug 'vim-airline/vim-airline', {'commit': '038e3a6ca59f11b3bb6a94087c1792322d1a1d5c'}
+    Plug 'vim-airline/vim-airline-themes', {'commit': 'dd81554c2231e438f6d0e8056ea38fd0e80ac02a'}
+    " Git integration: Ugly duck.
     Plug 'tpope/vim-fugitive', {'commit': 'b411b753f805b969cca856e2ae51fdbab49880df'}   
     " Markdown preview on browser
     Plug 'iamcco/markdown-preview.nvim', {'commit': '02cc3874738bc0f86e4b91f09b8a0ac88aef8e96'}  
@@ -27,4 +32,5 @@ call plug#end()
 
 " Very minimal plugin-based configurations
 set background=dark
-colo gruvbox
+set termguicolors
+colorscheme melange

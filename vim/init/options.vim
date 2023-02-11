@@ -13,10 +13,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on  " Required by vimwiki
-
 
 " Load an indent file for the detected file type.
 filetype indent on 
@@ -70,6 +68,9 @@ set showmatch
 " Use highlighting when doing a search.
 set hlsearch
 
+" Set autocomplete for commands
+set wildmenu
+
 " Set the commands to save in history default number is 20.
 set history=1000
 
@@ -90,3 +91,6 @@ set encoding=utf-8
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+"Turn on spell checking by default.
+set spelllang=en_us,pt_br
+set spell
