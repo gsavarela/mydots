@@ -3,3 +3,13 @@
 # <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
 api.github.com	0	1	1651862201	31536000
 github.com	0	1	1646490021	31536000
+# HSTS 1.0 Known Hosts database for GNU Wget.
+# Edit at your own risk.
+# <hostname>	<port>	<incl. subdomains>	<created>	<max-age>
+api.github.com	0	1	1671045979	31536000
+ftp.gnu.org	0	0	1670519862	63072000
+tb.rg-adguard.net	0	0	1675329253	31536000
+www.openssl.org	0	1	1668183016	31536000
+github.com	0	1	1670587285	31536000
+web.stanford.edu	0	0	1676739804	0
+codeload.github.com	0	0	1670587285	31536000
