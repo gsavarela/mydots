@@ -84,3 +84,6 @@ vim/plugged
 zsh/plugins/*
 zsh/.zcompdump
 zsh/.zsh_history
+
+# NPM
+npm/_*
