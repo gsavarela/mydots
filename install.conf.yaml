@@ -53,7 +53,7 @@
       relink: true
     ~/.local/bin/dwm: mydwm/dwm/dwm
     ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
-    ~/.local/bin/st: st/st
+    ~/.local/bin/st: myst/st
     ~/.local/share/fonts: fonts
     ~/.local/share/themes: themes
     ~/.local/state/keras: keras

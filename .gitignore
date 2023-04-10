@@ -57,10 +57,6 @@ Mkfile.old
 dkms.conf
 *.orig
 
-# DWM executable
-**/dwm/dwm*
-!**/dwm/dwm.1
-
 bash/.bash_history
 bash/.bash_logout
 
@@ -68,14 +64,9 @@ bash/.bash_logout
 nvim/.local/share/nvim/*
 nvim/.config/nvim/plugin/*
 
-# Dwm
-dwm/dwm
-
-# Dwmblocks
-dwmblocks/dwmblocks
-
-# St
-st/st
+# Do not track submodules
+mydwm*
+myst*
 
 # Vim 
 vim/plugged
