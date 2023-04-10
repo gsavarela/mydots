@@ -48,10 +48,11 @@
     ~/.config/X11: X11
     ~/.config/zsh: zsh
     ~/.local/bin: 
-      path: bin/*
+      path: mydwm/scripts/*
       glob: true
-    ~/.local/bin/dwm: dwm/dwm
-    ~/.local/bin/dwmblocks: dwmblocks/dwmblocks
+      relink: true
+    ~/.local/bin/dwm: mydwm/dwm/dwm
+    ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
     ~/.local/bin/st: st/st
     ~/.local/share/fonts: fonts
     ~/.local/share/themes: themes
