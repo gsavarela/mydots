@@ -6,6 +6,9 @@ call plug#begin('~/.config/vim/plugged')
     " Color schemes
     Plug 'morhetz/gruvbox', {'commit': 'bf2885a95efdad7bd5e4794dd0213917770d79b7'}
     Plug 'vihu/melange', {'commit': 'c0b83c136246ab56b24414f8ee8a6e633c8b9a92'} "Warm colors brown theme.
+    Plug 'dracula/vim', {'as': 'dracula', 'commit': 'eb577d47b0cfc9191bf04c414b4042d5f1a980f8'} "Dark theme
+    Plug 'nordtheme/vim', {'as': 'nord', 'commit': '684c345b8a8bf5e37919c38be6edaaa9356dbf4b'} "Boreal theme
+
     "Status bar
     Plug 'vim-airline/vim-airline', {'commit': '038e3a6ca59f11b3bb6a94087c1792322d1a1d5c'}
     Plug 'vim-airline/vim-airline-themes', {'commit': 'dd81554c2231e438f6d0e8056ea38fd0e80ac02a'}
@@ -33,4 +36,4 @@ call plug#end()
 " Very minimal plugin-based configurations
 set background=dark
 set termguicolors
-colorscheme melange
+colorscheme nord
