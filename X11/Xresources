@@ -1,0 +1,24 @@
+! source dwm colorscheme !
+#include "/home/gsavarela/.config/dwm/theme"
+
+! source dmenu colorscheme !
+#include "/home/gsavarela/.config/dmenu/theme"
+
+! source st configurations !
+#include "/home/gsavarela/.config/st/theme"
+
+! fonts config !
+Xft.dpi: 120
+Xft.antialias:	1
+Xft.hinting:	1
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgb
+Xft.lcdfilter:	lcddefault
+st.font:         JetBrainsMono:style:medium:pixelsize=13:antialias=true:autohint=true
+
+!! Set a default font and font size as below:
+*.font: monospace:size=11
+
+
+
