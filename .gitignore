@@ -61,8 +61,7 @@ bash/.bash_history
 bash/.bash_logout
 
 # Neovim packer
-nvim/.local/share/nvim/*
-nvim/.config/nvim/plugin/*
+nvim/plugin/*
 
 # Do not track submodules
 mydwm*
@@ -78,3 +77,4 @@ zsh/.zsh_history
 
 # NPM
 npm/_*
+

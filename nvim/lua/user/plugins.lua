@@ -100,7 +100,12 @@ return packer.startup(function(use)
   -- use {"ziontee113/color-picker.nvim", commit = ""}
 
   -- Colorschemes
-  use {'luisiacc/gruvbox-baby', commit= "8b47d6bfdb704baa3b5735836bd501579897f9f3"}
+  -- requires vim>8.0.0
+  -- use {'Mofiqul/dracula.nvim', commit = "26d04c8ced02f02207e7aec1d5730c3a9ebadeeb"}
+  use {'richin13/dracula.nvim', commit = "1fc5aa1dc148d3a888568a7925a757b8e60748b8"}
+  use {'luisiacc/gruvbox-baby', commit = "8b47d6bfdb704baa3b5735836bd501579897f9f3"}
+  use {'shaunsingh/nord.nvim', commit = "78f5f001709b5b321a35dcdc44549ef93185e024"}
+  
 
   -- Debugging
   use {"mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d"}
