@@ -47,6 +47,7 @@
     ~/.config/vim: vim
     ~/.config/X11: X11
     ~/.config/zsh: zsh
+    ~/.config/zathura: zathura
     ~/.local/bin: 
       path: mydwm/scripts/*
       glob: true
@@ -72,6 +73,7 @@
     - ~/.config/python
     - ~/.config/vim
     - ~/.config/X11
+    - ~/.config/zathura
     - ~/.config/zsh
     - ~/.local/bin
     - ~/.local/share/fonts
