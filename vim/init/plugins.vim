@@ -8,6 +8,7 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'vihu/melange', {'commit': 'c0b83c136246ab56b24414f8ee8a6e633c8b9a92'} "Warm colors brown theme.
     Plug 'dracula/vim', {'as': 'dracula', 'commit': 'eb577d47b0cfc9191bf04c414b4042d5f1a980f8'} "Dark theme
     Plug 'nordtheme/vim', {'as': 'nord', 'commit': '684c345b8a8bf5e37919c38be6edaaa9356dbf4b'} "Boreal theme
+    Plug 'ghifarit53/tokyonight-vim', {'as': 'tokyonight', 'commit': '4e82e0f0452a6ce8f387828ec71013015515035a'} "Dark background and bright foreground
 
     "Status bar
     Plug 'vim-airline/vim-airline', {'commit': '038e3a6ca59f11b3bb6a94087c1792322d1a1d5c'}
@@ -36,4 +37,4 @@ call plug#end()
 " Very minimal plugin-based configurations
 set background=dark
 set termguicolors
-colorscheme nord
+colorscheme tokyonight
