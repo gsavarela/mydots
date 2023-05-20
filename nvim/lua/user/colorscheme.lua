@@ -20,4 +20,4 @@ vim.g.gruvbox_baby_transparent_mode = 0
 vim.g.gruvbox_baby_use_original_palette = 1
 
 -- Load the colorscheme
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme tokyonight]]
