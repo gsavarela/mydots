@@ -1,9 +1,6 @@
 ! source dwm colorscheme !
 #include "/home/gsavarela/.config/dwm/theme"
 
-! source dmenu colorscheme !
-#include "/home/gsavarela/.config/dmenu/theme"
-
 ! source st configurations !
 #include "/home/gsavarela/.config/st/theme"
 
