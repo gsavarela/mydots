@@ -10,6 +10,7 @@ call plug#begin('~/.config/vim/plugged')
     Plug 'nordtheme/vim', {'as': 'nord', 'commit': '684c345b8a8bf5e37919c38be6edaaa9356dbf4b'} "Boreal theme
     Plug 'ghifarit53/tokyonight-vim', {'as': 'tokyonight', 'commit': '4e82e0f0452a6ce8f387828ec71013015515035a'} "Dark background and bright foreground
     Plug 'rose-pine/vim', {'as': 'rose-pine', 'commit': 'd149980cfa5cdec487df23b2e9963c3256f3a9f3:'} "Dark background and pastel rose
+    Plug 'catppuccin/vim', { 'as': 'catppuccin', 'commit': 'cf186cffa9b3b896b03e94247ac4b56994a09e34' }
 
     "Status bar
     Plug 'vim-airline/vim-airline', {'commit': '038e3a6ca59f11b3bb6a94087c1792322d1a1d5c'}
@@ -38,4 +39,4 @@ call plug#end()
 " Very minimal plugin-based configurations
 set background=dark
 set termguicolors
-colorscheme rosepine
+colorscheme catppuccin_macchiato

@@ -107,7 +107,7 @@ return packer.startup(function(use)
   use {'shaunsingh/nord.nvim', commit = '78f5f001709b5b321a35dcdc44549ef93185e024'}
   use {'folke/tokyonight.nvim', commit = 'df13e3268a44f142999fa166572fe95a650a0b37'}
   use {'rose-pine/neovim', as='rose-pine', commit = '69dca24ba7f8e74f1e6f0bacbc93481ac4047f2e'} 
-  
+  use { "catppuccin/nvim", as = "catppuccin", commit='4800750203798fb87d7d0192c3281b5fd3e086dd'}
 
   -- Debugging
   use {"mfussenegger/nvim-dap", commit = "014ebd53612cfd42ac8c131e6cec7c194572f21d"}
