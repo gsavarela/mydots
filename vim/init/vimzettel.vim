@@ -11,7 +11,7 @@
 " https://www.reddit.com/r/Zettelkasten/comments/fidaum/vimzettel_an_addon_for_the_vimwiki_addon_for_vim/
 " [2] https://github.com/michal-h21/vim-zettel
 " Uses default markdown instead of vimwiki markdown
-let g:nv_search_paths = ['~/Library/notas/catolicas', '~/Library/notas/informatics']
+let g:nv_search_paths = ['~/Library/notas/telos', '~/Library/notas/informatics']
 let g:zettel_format = '%Y%m%d%H%M%S'    " format of the zettel notes
 
 "  Keymaps [1]:
