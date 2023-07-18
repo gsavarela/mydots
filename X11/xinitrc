@@ -55,7 +55,7 @@ pulseaudio --start
 
 # Home dual monitor setup
 if [ -n $(xrandr --listmonitors | grep +DP1 | cut -d' ' -f3) ]; then 
-  xrandr --output eDP1 --primary --mode 1920x1080 --output DP1 --mode 1920x1080 --left-of eDP1
+  xrandr --output eDP1 --primary --mode 1920x1080 --output DP1 --mode 1920x1080 --right-of eDP1
 fi
 
 # Decrease default backlight for savings
