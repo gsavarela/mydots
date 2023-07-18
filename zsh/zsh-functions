@@ -37,5 +37,6 @@ function zsh_add_completion() {
 
 # Fast open files
 function fzop() {
-  target="$(fzf)";  xdg-open "${target}" &
+  target="$(FZF_DEFAULT_COMMAND='fd -tf . $HOME' fzf)";  xdg-open "${target}" &
+  # folder=$(FZF_DEFAULT_COMMAND='fd -td . $HOME' fzf)
 }
