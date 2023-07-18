@@ -46,6 +46,13 @@ cmd open ${{
     esac
 }}
 
+# Selects a destination folder from the home directory
+# uses fd as an improved finder method
+cmd move ${{
+  folder=$(FZF_DEFAULT_COMMAND='fd -td . $HOME' fzf)
+  [[ -d "${folder}" ]] &&  mv $f "${folder}"
+}}
+
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 # map r push :rename<space>
@@ -138,6 +145,7 @@ map <enter> open
 map bg setwallpaper
 map o open
 map r rename
+map M move
 map H top
 map L bottom
 map R reload
