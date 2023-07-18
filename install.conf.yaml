@@ -1,5 +1,7 @@
 # dotbot
+#
 # https://github.com/anishathalye/dotbot
+#
 - defaults:
     link:
       relink: true
@@ -48,13 +50,13 @@
     ~/.config/X11: X11
     ~/.config/zsh: zsh
     ~/.config/zathura: zathura
-    ~/.local/bin: 
-      path: mydwm/scripts/*
-      glob: true
-      relink: true
-    ~/.local/bin/dwm: mydwm/dwm/dwm
-    ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
-    ~/.local/bin/st: myst/st
+    # ~/.local/bin: 
+    #   path: mydwm/scripts/*
+    #   glob: true
+    #   relink: true
+    # ~/.local/bin/dwm: mydwm/dwm/dwm
+    # ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
+    # ~/.local/bin/st: myst/st
     ~/.local/share/fonts: fonts
     ~/.local/share/themes: themes
     ~/.local/state/keras: keras
