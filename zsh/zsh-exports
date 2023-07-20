@@ -20,6 +20,9 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_RUNTIME_DIR=$HOME/.local/proc
 
 export XDG_STATE_HOME=$HOME/.local/state
+# System directories (`:` separated list like $PATH)
+# Default: :/usr/local/share:/usr/share
+export XDG_DATA_DIRS=$XDG_DATA_HOME:/usr/local/share:/usr/share
 
 export EDITOR='vim'
 export READER='zathura'
