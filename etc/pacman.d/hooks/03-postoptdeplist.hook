@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+When = PostTransaction
+Exec = /bin/sh -c '/usr/bin/comm -13 <(/usr/bin/pacman -Qqdt | /usr/bin/sort) <(/usr/bin/pacman -Qqdtt | /usr/bin/sort) > "postoptdeplist_$(date '+%Y-%m-%d.%H%M%S').txt"'
