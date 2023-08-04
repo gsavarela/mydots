@@ -34,7 +34,6 @@
       #  ~/.config/bash:
       #  path: bash/*
       #  glob: true
-    ~/.config/fontconfig/font.conf: fonts.conf 
     ~/.config/git: git
     ~/.config/lf: lf
     ~/.config/neofetch: 
@@ -57,14 +56,12 @@
     # ~/.local/bin/dwm: mydwm/dwm/dwm
     # ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
     # ~/.local/bin/st: myst/st
-    ~/.local/share/fonts: fonts
     ~/.local/state/keras: keras
     
 
 - create:
     - ~/.config/dunst
     # - ~/.config/bash
-    - ~/.config/fontconfig
     - ~/.config/git
     - ~/.config/lf
     - ~/.config/neofetch
@@ -77,7 +74,6 @@
     - ~/.config/zathura
     - ~/.config/zsh
     - ~/.local/bin
-    - ~/.local/share/fonts
     - ~/.local/state/keras
 
 
