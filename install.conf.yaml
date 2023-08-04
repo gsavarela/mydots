@@ -58,7 +58,6 @@
     # ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
     # ~/.local/bin/st: myst/st
     ~/.local/share/fonts: fonts
-    ~/.local/share/themes: themes
     ~/.local/state/keras: keras
     
 
@@ -79,7 +78,6 @@
     - ~/.config/zsh
     - ~/.local/bin
     - ~/.local/share/fonts
-    - ~/.local/share/themes
     - ~/.local/state/keras
 
 
