@@ -1,14 +1,11 @@
 [Desktop Entry]
-Version=1.0
-Type=Application
-Name=Zathura
-Comment=A minimalistic document viewer
-Exec=zathura %U
-# Translators: Icon of the desktop entry.
-Icon=org.pwmt.zathura
-Terminal=false
-Categories=Office;Viewer;
-MimeType=application/pdf;
-# Translators: Search terms to find this application. Do not translate or
-# localize the semicolons. The list must also end with a semicolon.
-Keywords=PDF;PS;PostScript;DjVU;document;presentation;viewer;
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name[en_US]=zathura                                # name of an app.
+GenericName=zathura                             # longer name of an app.
+Exec=/usr/bin/zathura                              # command used to launch an app.
+Terminal=true                                   # whether an app requires to be run in a terminal.
+#Icon[en_US]=~/.local/share/applications/sxiv-icon.png         # location of icon file.
+Type=Application                                # type.
+Categories=Application;DocumentViewer;Document;       # categories in which this app should be listed.
+Comment[en_US]=Minimal Document Viewer             # comment which appears as a tooltip.
