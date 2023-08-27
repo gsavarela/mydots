@@ -27,41 +27,67 @@
       recursive: true
 
 - link:
-    ~/.config/applications: 
-      path: applications/*
-      glob: True
+    ~/.config/applications:
+       path: applications/*
+       glob: True
     ~/.config/dunst: dunst
       #  ~/.config/bash:
       #  path: bash/*
       #  glob: true
+    ~/.config/fontconfig/font.conf:
+      path: fonts.conf
+    ~/.config/gtk-2.0:
+      if: '[ -d mydwm ]'
+      path: mydwm/gtk-2.0
+    ~/.config/gtk-3.0:
+      if: '[ -d mydwm ]'
+      path: mydwm/gtk-3.0
     ~/.config/git: git
     ~/.config/lf: lf
-    ~/.config/neofetch: 
+    ~/.config/neofetch:
       path: neofetch
       relink: true
-    ~/.config/npm: npm 
-    ~/.config/nvim: nvim 
+    ~/.config/npm: npm
+    ~/.config/nvim: nvim
     ~/.config/locale.conf: locale.conf
     ~/.config/picom: picom
     ~/.config/python: python
+    ~/.config/st:
+      if: '[ -d myst ]'
+      path: myst/xresources/*
+      glob: true
+      relink: true
     ~/.config/wget-hsts: wget-hsts
     ~/.config/vim: vim
     ~/.config/X11: X11
     ~/.config/zsh: zsh
     ~/.config/zathura: zathura
-    # ~/.local/bin: 
-    #   path: mydwm/scripts/*
-    #   glob: true
-    #   relink: true
-    # ~/.local/bin/dwm: mydwm/dwm/dwm
-    # ~/.local/bin/dwmblocks: mydwm/dwmblocks/dwmblocks
-    # ~/.local/bin/st: myst/st
-    ~/.local/state/keras: keras
-    
+    ~/.local/bin:
+      if: '[ -d mydwm ]'
+      path: mydwm/scripts/*
+      glob: true
+      relink: true
+    ~/.local/bin/dwm:
+      if: '[ -d mydwm ]'
+      path: mydwm/dwm/dwm
+    ~/.local/bin/dwmblocks: 
+      if: '[ -d mydwm ]'
+      path: mydwm/dwmblocks/dwmblocks
+    ~/.local/bin/st:
+      if: '[ -d myst ]'
+      path: myst/st
+    # ~/.local/state/keras: keras
+    ~/.local/share/fonts:
+      if: '[ -d mydwm ]'
+      path: mydwm/fonts
+    ~/.local/share/themes: 
+      if: '[ -d mydwm ]'
+      path: mydwm/themes
 
 - create:
-    - ~/.config/dunst
     # - ~/.config/bash
+    - ~/.config/dunst
+    - ~/.config/dwm
     - ~/.config/git
     - ~/.config/lf
     - ~/.config/neofetch
@@ -69,6 +95,7 @@
     - ~/.config/nvim
     - ~/.config/picom
     - ~/.config/python
+    - ~/.config/st
     - ~/.config/vim
     - ~/.config/X11
     - ~/.config/zathura
