@@ -55,8 +55,11 @@ alias libreoffice='LD_LIBRARY_PATH="${iculib}" libreoffice'
 alias keepassxc='LD_LIBRARY_PATH="${iculib}" keepassxc'
 alias keepassxc-cli2='LD_LIBRARY_PATH="${iculib}" keepassxc-cli'
 alias android-file-transfer='LD_LIBRARY_PATH="${iculib}" android-file-transfer'
+alias planify='LD_LIBRARY_PATH="${iculib}" planify'
+alias flameshot='LD_LIBRARY_PATH="${iculib}" flameshot'
 # SUMO TOOLS
 alias sumo='LD_LIBRARY_PATH="${iculib}" sumo'
 alias sumo-gui='LD_LIBRARY_PATH="${iculib}" sumo-gui'
 alias netconvert='LD_LIBRARY_PATH="${iculib}" netconvert'
 alias netedit='LD_LIBRARY_PATH="${iculib}" netedit'
+
