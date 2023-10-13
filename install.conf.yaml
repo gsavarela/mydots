@@ -17,6 +17,8 @@
       recursive: true
     ~/.config/python:
       recursive: true
+    ~/.config/tmux:
+      recursive: true
     ~/.config/vim:
       recursive: true
     ~/.config/X11:
@@ -55,6 +57,11 @@
     ~/.config/st:
       if: '[ -d myst ]'
       path: myst/xresources/*
+      glob: true
+      relink: true
+    ~/.config/tmux/tmux.conf: tmux/tmux.conf
+    ~/.config/tmux/plugins:
+      path: tmux/plugins/*
       glob: true
       relink: true
     ~/.config/wget-hsts: wget-hsts
@@ -96,6 +103,7 @@
     - ~/.config/picom
     - ~/.config/python
     - ~/.config/st
+    - ~/.config/tmux
     - ~/.config/vim
     - ~/.config/X11
     - ~/.config/zathura

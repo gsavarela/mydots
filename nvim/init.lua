@@ -21,4 +21,5 @@ require("user.gitsigns")
 require("user.indentline")
 require("user.nvim-tree")
 require("user.toggleterm")
+require("user.tmux-navigator")
 

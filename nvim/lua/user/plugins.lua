@@ -138,6 +138,8 @@ return packer.startup(function(use)
   -- Navigation
   use {"akinsho/bufferline.nvim", commit = "c78b3ecf9539a719828bca82fc7ddb9b3ba0c353"}
   -- use {"lalitmee/browse.nvim", commit = ""}      -- Searches hyperlinks from documents opening browsers.
+  -- When combined with a set of tmux key bindings, the plugin will allow you to navigate seamlessly between vim and tmux splits using a consistent set of hotkeys.
+  use {"christoomey/vim-tmux-navigator", lazy=false, commit="addb64a772cb4a3ae1f1363583012b2cada2cd66"}
 
   -- Statusline
   use {"nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd"}
