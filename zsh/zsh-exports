@@ -28,7 +28,6 @@ export EDITOR='vim'
 export READER='zathura'
 export TERMINAL='st'
 export JRE_ENV='/usr/lib/jvm/default/bin'
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 
 # source
 source "$XDG_CONFIG_HOME/profile"
@@ -37,8 +36,10 @@ source "$XDG_CONFIG_HOME/profile"
 export LESSHISTFILE=-
 
 # Hardcoded paths
+export ANDROID_HOME="$XDG_DATA_HOME"/android
 export CARGO_HOME="$XDG_DATA_HOME"/cargo/bin
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export HISTFILE="${XDG_STATE_HOME}"/bash/history
 # export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
@@ -55,7 +56,14 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 # Allows for separate config files for vim and neovim
 export VIMINIT='let $MYVIMRC = !has("nvim") ? "$XDG_CONFIG_HOME/vim/vimrc" : "$XDG_CONFIG_HOME/nvim/init.lua" | so $MYVIMRC'
+# Traffic paths
 export ILURL_HOME="$XDG_REPOSITORIES_DIR/ilu/ilurl"
-export SUMO_HOME="$HOME/Repos/sumo"
+export SUMO_HOME="/usr/share/sumo"
+export SUMO_TOOLS="/usr/share/sumo/tools"
+export LIBSUMO_AS_TRACI=1
 export BIN_HOME="$HOME/.local/bin"
 export PATH="$PATH:$BIN_HOME:$SUMO_HOME:$CARGO_HOME:$JRE_ENV"
+
+# Custom path aliases
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+alias svn="svn --config-dir $XDG_CONFIG_HOME/subversion"
