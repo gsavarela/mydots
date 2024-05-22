@@ -40,4 +40,4 @@ call plug#end()
 " Very minimal plugin-based configurations
 set background=dark
 set termguicolors
-colorscheme nord
+colorscheme rosepine
