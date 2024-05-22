@@ -50,8 +50,8 @@ export IDENTIFIER="unicode"
 
 dwmblocks &
 
-# pulseaudio
-pulseaudio --start
+# pipewire sound
+pipewire & pipewire-pulse & wireplumber &
 
 # Home dual monitor setup
 if [ -n $(xrandr --listmonitors | grep +DP1 | cut -d' ' -f3) ]; then 
