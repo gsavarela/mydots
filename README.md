@@ -17,32 +17,31 @@
 
 
 
-# 1. Installation<a name="installation"></a> 
+
+## 1. Installation<a name="installation"></a> 
 
 Those are my dot files so far.. this is a work in progress hence it may break.
 Bootstraping is greatly simplified using
 [dotbot](https://github.com/anishathalye/dotbot) for user dependencies and stow
 for system-wide dependencies.
 
-## Know Requirements
+### Known Requirements
 
  - `git` 
  - GNU `stow`
  - [XDG Base Directory](https://wiki.archlinux.org/title/XDG_Base_Directory)
 
 
-## Download
+### Download
 
 `cd` into a directory of your choice
 
 
 ```
 git clone https://github.com/gsavarela/mydots.git && cd mydots
-
 ```
 
-## Compile Suckless Tools
-
+### Compile Suckless Tools
 ```
 cd dwm && sudo make clean install && cd .. \
 cd dwmblocks && sudo make clean install && cd .. \
@@ -50,20 +49,19 @@ cd st && sudo make clean install && cd
 ```
 
 
-## Run install script
+### Run install script
 
 Installation is performed by a python based application dotbot. To launch
 configuration `install.conf.yaml`  run:
-
 
 
 ```
 ./install
 ```
 Stow is used to symlink zshenv to /etc/
----
 
-# Windom Manager: Dwm
+
+## 2. Windom Manager: Dwm
 
 ## Dwmblocks-async<a name="dwmblocks-async"></a> 
 
@@ -80,9 +78,8 @@ Credits to [UtkarshVerma](https://github.com/UtkarshVerma/dwmblocks-async)
 - Each block can be externally triggered to update itself
 - Compatible with `i3blocks` scripts
 
-
 ---
-# Installed fonts<a name="fonts"></a> 
+## Installed fonts<a name="fonts"></a> 
 Two good sources: [Suckless Terminal and Fonts](https://github.com/LukeSmithxyz/voidrice/issues/284) and [MachOS](https://github.com/Mach-OS/Machfiles) 
 
 ```
@@ -96,8 +93,14 @@ Two good sources: [Suckless Terminal and Fonts](https://github.com/LukeSmithxyz/
 
 ## 3. Editors
 
-### Neovim as IDE <a name="neovim_as_ide"></a> 
-  TODO: List the plugins.
+### Neovim with NVChad as  a Python IDE <a name="neovim_as_ide"></a> 
+
+Uses NVChad 2.5: Blazing fast Neovim config providing solid defaults and a beautiful UI. Requires: 
+
+- Neovim 0.10
+- JetbrainsMono Nerd Font or another patched Nerd Font.
+- Ripgrep for searching with Telescope
+- GCC (linux).
 
 ### Vim for Notetaking <a name="vim_for_notetaking"></a> 
 
@@ -135,7 +138,9 @@ Type `:Zettel` and press tab for command completion.
 
 ### Vim as Mergetool.
 
-## 4. Shell: zsh<a name="zsh"></a> 
+  TODO: Fugitive plugin basics.
+
+### 4. Shell: zsh<a name="zsh"></a> 
 
 The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 
@@ -148,11 +153,11 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 
 # TODO
 
-- [] Switch to [xrdb patch](https://dwm.suckless.org/patches/xrdb/) for theme switching
+- [x] Switch to [xrdb patch](https://dwm.suckless.org/patches/xrdb/) for theme switching
 - [] Create a list of keybindings
 - [ ] Explain installation procedure and how everything works
-	- [] Mention the mandatory and optional dependencies
-	- [ ] Make a basic guide
+	- [ ] Mention the mandatory and optional dependencies
+	- [x] Make a basic guide
 	- [ ] Make a detailed guide
 	- [ ] Make guides for fedora and debian
 - [] Scripts for detecting mountable and unmountable paths
