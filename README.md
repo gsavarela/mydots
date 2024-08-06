@@ -30,6 +30,8 @@ for system-wide dependencies.
  - `git` 
  - GNU `stow`
  - [XDG Base Directory](https://wiki.archlinux.org/title/XDG_Base_Directory)
+ - picom-simpleanims-git ([showcase](https://www.youtube.com/watch?v=Gc_M3JkJK1U))
+
 
 
 ### Download
@@ -59,6 +61,7 @@ configuration `install.conf.yaml`  run:
 ./install
 ```
 Stow is used to symlink zshenv to /etc/
+
 
 
 ## 2. Windom Manager: Dwm
@@ -149,6 +152,7 @@ The reference is the [Matchfiles](https://github.com/Mach-OS/Machfiles) repo.
 - Synthax high-lighting.
 - Code completion.
 - Sane `zsh/` directory vs. monolithic `.bashrc`.
+
 
 
 # TODO
