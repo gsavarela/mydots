@@ -28,7 +28,7 @@ except FileNotFoundError:
 
 # Prevents creation of default history if custom is empty
 if readline.get_current_history_length() == 0:
-    readline.add_history(f'# History created at {time.asctime()}')
+    readline.add_history('# History created at {0}'.format(time.asctime()))
 
 atexit.register(write_history, history)
 del (atexit, os, readline, time, history, write_history)

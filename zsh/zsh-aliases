@@ -50,4 +50,4 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 
 # always devour CLI
 alias zt='devour zathura'
-
+alias vipy='ipython --TerminalInteractiveShell.editing_mode=vi'
